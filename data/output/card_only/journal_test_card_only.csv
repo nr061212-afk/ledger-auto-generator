@@ -1,0 +1,6 @@
+﻿date,source_file,debit_account,credit_account,amount,description,tax_category,status
+2025/05/25,card.csv,消耗品費,普通預金,-4000.0,AMAZON,課税仕入10%,OK
+2025/05/26,card.csv,車両費,普通預金,-3500.0,ENEOS,課税仕入10%,OK
+2025/05/27,card.csv,消耗品費,普通預金,-900.0,セブンイレブン,課税仕入10%,OK
+2025/05/28,card.csv,通信費,普通預金,-8200.0,DOCOMO,課税仕入10%,OK
+2025/05/29,card.csv,未払金,普通預金,-25000.0,楽天カード,対象外,OK

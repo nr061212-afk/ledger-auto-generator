@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
-from processor import process_row
+from processor import process_row, normalize_input_columns
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
 
 st.title("仕訳自動生成ツール")
 st.caption("銀行明細CSVをアップロードすると仕訳を自動生成します")
@@ -10,8 +14,10 @@ input_file = st.file_uploader("銀行明細CSV", type="csv")
 rule_file = st.file_uploader("ルールCSV", type="csv")
 
 if input_file and rule_file:
-    bank_df = pd.read_csv(input_file)
-    rule_df = pd.read_csv(rule_file)
+    bank_df = pd.read_csv(input_file, encoding="shift-jis")
+    rule_df = pd.read_csv(rule_file, encoding="utf-8-sig")
+
+    bank_df = normalize_input_columns(bank_df)
 
     st.subheader("読み込んだ明細データ")
     st.dataframe(bank_df)

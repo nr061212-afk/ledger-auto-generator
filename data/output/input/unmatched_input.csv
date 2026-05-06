@@ -1,0 +1,4 @@
+﻿date,source_file,amount,description,status,reason,candidates
+2025/06/01,bank.csv,-7777.0,謎の支払い,未判定,ルール未一致,
+2025/06/03,bank.csv,1000.0,テスト,未判定,ルール未一致,
+2025/06/02,bank.csv,0.0,,未判定,摘要が空欄,
